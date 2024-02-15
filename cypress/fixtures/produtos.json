@@ -1,0 +1,26 @@
+[
+    {
+        "nomeProduto": "Aero Daily Fitness Tee",
+        "tamanho": "XS",
+        "cor": "Black",
+        "qtd": 1
+    },
+    {
+        "nomeProduto": "Abominable Hoodie",
+        "tamanho": "L",
+        "cor": "Blue",
+        "qtd": 1
+    },
+    {
+        "nomeProduto": "Argus All-Weather Tank",
+        "tamanho": "XS",
+        "cor": "Gray",
+        "qtd": 1
+    },
+    {
+        "nomeProduto": "Ajax Full-Zip Sweatshirt",
+        "tamanho": "M",
+        "cor": "Green",
+        "qtd": 1
+    }
+]

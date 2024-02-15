@@ -1,5 +1,10 @@
 /// <reference types="cypress" />
 
+let dadosLogin
+import pagProdPage from "../support/page_objects/pagProd.page";
+const { faker } = require('@faker-js/faker');
+
+
 context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
     /*  Como cliente 
         Quero acessar a Loja EBAC 
@@ -10,11 +15,21 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         E validando minha compra ao final */
 
     beforeEach(() => {
-        cy.visit('/')
+        cy.visit('/minha-conta/')
+        cy.fixture('perfil').then(login => {
+            cy.login(login.usuario, login.senha)
+        }),
+        pagProdPage.visitaUrl()
+    });
+    afterEach(() => {
+        cy.screenshot()
     });
 
     it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
-        //TODO 
+        cy.comprinhas()
+        cy.cadastro()
+        cy.wait(5000)
+        cy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.')
     });
 
 
